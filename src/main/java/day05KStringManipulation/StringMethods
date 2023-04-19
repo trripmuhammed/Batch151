@@ -1,0 +1,58 @@
+                              STRİNG METODLARI
+1) toUpperCase() : Tüm harfleri büyük yapar (Döndürülen Data String dir)
+2) toLowerCase() : Tüm harfleri küçük yapar (Döndürülen Data String dir)
+3) charAt() : Cümledeki istediğimiz karakteri alırız (Döndürülen Data Char dır)
+(ilk karakter parantez içine 0 yazılarak alınır))
+4) length() : Data'daki karakter sayısını belirler. (Döndürülen data int dır)
+5) substring() : Data'da belirlenen kısmı alır burda aralıkda belirlenebilir (substring(a,b))
+aralık belirlersek [a,b) şeklinde çalışır b sayılmaz. (Döndürülen data String dir)
+6) contains() : İçine yazılan karakteri içerip içermediğini boolean olarak söyler
+7) startsWith() : Data'nın belirtilen karakterle başlayıp başlamadığını kontrol eder
+istersek yazdıgımız karakterden sonra virgül ekleyip ilk karakterlerin bir kısmını
+yok sayaabiliriz. ("dün",6)==> 6 karakteri yok sayar sonra dün kelimesi geliyorsa true verir
+--endsWith-- de var
+8)isEmpty() : Data'nın içinin boş olup olmadığını kontrol eder.'
+9)replace() : seçtiğimiz data nın olan datanın yerine geçmesini sağlar
+10)replaceAll() : bir grup datayı değiştirmek için kullanılır
+                          Bir grup data= Regular expression (Regex) kullanılır
+                          en cok kullanılan regexler:
+                          1)tüm rakamlar ==>[0-9]
+                          2)tüm kücük harfler ==>[a-z]
+                          3)tüm büyük harfler ==>[A-Z]
+                          4)tüm harfler ==>[a-zA-Z]
+                          5)tüm harfler ve rakamlar ==>[a-zA-Z0-9]
+                          6)tüm sesli harfler ==>[aeiouAEIOU]
+                          7)tüm noktolama işaretleri ==>  [\\p{Punct}] olumsuzu ==> ^\\P{P} (köşeli parantez *denenmesi lazım)
+                          bu işaret noktalama hariç hepsini olumsuz kullanmamızı sağlar (^)
+                          [^a-z]
+Harf ve sayı haricindeki tüm herşey semboldür
+11)replaceFirst : replace() ile aynı isi yapıyor ama ilk gordugu datayı degistiriyor
+12)trim() : Bir string de başında ve sonundaki space leri siler (aradakilere dokunulmaz)
+13)valueOf() : String olan datayı double a çevirir
+14)parseDouble() : String içindeki sayıyı double a dönüştürür (parse=ayrıştırmak)
+            String tv = "599.99$";
+            String laptop = "299.99$";
+            String tv2 = tv.replace("$","");
+            String laptop2 = laptop.replace("$","");
+            double fiyat1 = Double.parseDouble(tv2);
+            double fiyat2 = Double.parseDouble(laptop2);
+NOTE: 13 14 den daha kolay
+15)split() : içine girilen karakter den kelimeleri ayırır
+        String fullName = "  mehmet fatih  ";
+        char firstName = fullName.trim().toUpperCase().charAt(0);
+        char lastName = fullName.trim().toUpperCase().split(" ")[1].charAt(0);
+16)isBlank = Bu içi boşmu dolumu kontrol eder ama boşluk ları saymaz
+17)indexOf() : verilen karakter veya karakterlerin ilk görünümünün indexini (başladığı int konum "arabam cok guzel"==cok un indexi 7 dir) verir
+18)lastIndexOf() : verilen karakter veya karakterlerin son görünümünün indexini verir (sondan başlar)
+bu ikisindede olmayan karakter sorgulanırsa ikiside -1 verir
+
+username
+email
+password
+address
+
+
+
+
+
+
